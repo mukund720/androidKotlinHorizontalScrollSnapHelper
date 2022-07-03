@@ -3,22 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+android:layout_gravity="center"
     android:padding="20dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvImage"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:background="#FF6F00"
         app:cardCornerRadius="10dp"
         app:cardElevation="3dp"
         app:cardUseCompatPadding="true">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
 
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
             <TextView
 
                 android:id="@+id/title"
@@ -35,6 +36,7 @@
                 />
 
             <TextView
+                android:layout_below="@+id/title"
                 android:id="@+id/author"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -44,20 +46,15 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/title" />
-        </LinearLayout>
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
             <ImageView
+                android:layout_below="@id/author"
                 android:id="@+id/image"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="300dp"
                 android:background="#FF6F00"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_baseline_4g_plus_mobiledata_24" />
-        </RelativeLayout>
+  </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
 
